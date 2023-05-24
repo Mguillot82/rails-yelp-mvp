@@ -1,0 +1,8 @@
+<%= form_with model: @restaurant do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.label :address %>
+  <%= form.text_field :address %>
+  <%= form.select :category, %w[chinese italian japanese french belgian]%>
+  <%= form.submit %>
+<% end %>

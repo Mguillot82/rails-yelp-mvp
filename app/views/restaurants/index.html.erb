@@ -1,0 +1,14 @@
+<nav class="navbar bg-body-tertiary bg-light ">
+    <h1 class="navbar-text text-black-50"> Yelp MVP</h1>
+  </nav>
+    <ul class="list-group">
+      <%@restaurants.each do |restaurant|%>
+      <li class="list-group-item ">
+        <div class="fw-bold"><%= link_to "#{restaurant['name']}", "restaurants/#{restaurant['id']}"%></div>
+        <div class="restaurant-address"> <%= restaurant['address']%></div>
+        <div class="restaurant-category"> <%= restaurant['category']%></div>
+      </li>
+      <% end %>
+    </ul>
+
+    <%= link_to 'Create an restaurant brother', 'restaurants/new' %>
